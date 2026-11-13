@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Free API List</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Free API List</h1>
+    <p>データ元: <a href="https://github.com/public-apis/public-apis" target="_blank" rel="noopener">public-apis/public-apis</a></p>
+  </header>
+  <section class="filters">
+    <input id="q" type="search" placeholder="名前・説明で検索">
+    <select id="category"><option value="">全カテゴリ</option></select>
+    <select id="auth">
+      <option value="">Auth: すべて</option>
+      <option value="No">認証なし</option>
+      <option value="apiKey">apiKey</option>
+      <option value="OAuth">OAuth</option>
+    </select>
+    <label><input id="https" type="checkbox"> HTTPS</label>
+    <label><input id="cors" type="checkbox"> CORS対応</label>
+    <span id="count"></span>
+  </section>
+  <main>
+    <table>
+      <thead><tr><th>API</th><th>説明</th><th>Auth</th><th>HTTPS</th><th>CORS</th><th>カテゴリ</th></tr></thead>
+      <tbody id="list"></tbody>
+    </table>
+    <p id="status">読み込み中...</p>
+  </main>
+  <script src="js/main.js"></script>
+</body>
+</html>
